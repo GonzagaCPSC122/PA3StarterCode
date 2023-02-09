@@ -1,7 +1,7 @@
 # README !!!
 
 ## To Setup (One Time Only)
-`git clone (your github repo url here)` 
+`git clone (your github repo url here)`  
 `cd` into your local repo you just cloned into  
 `mkdir build`  
 `cd build`  
