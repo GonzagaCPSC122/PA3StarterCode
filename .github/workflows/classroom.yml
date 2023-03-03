@@ -16,7 +16,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Validate test file
         run: |
-          wget -O test/OfficialTest.cpp https://raw.githubusercontent.com/GonzagaCPSC122/PA3StarterCode/master/test/Test.cpp; if cmp "test/OfficialTest.cpp" "test/Test.cpp"; then echo "The files match"; exit 0; fi; echo "The files are different"; exit 1;
+          wget -O test/OfficialTest.cpp https://raw.githubusercontent.com/GonzagaCPSC122/PA3StarterCode/master/test/Test.cpp; wget -O .github/classroom/official_autograding.json https://raw.githubusercontent.com/GonzagaCPSC122/PA3StarterCode/master/.github/classroom/autograding.json; if cmp "test/OfficialTest.cpp" "test/Test.cpp" && cmp ".github/classroom/official_autograding.json" ".github/classroom/autograding.json"; then echo "The files match"; exit 0; fi; echo "The files are different"; exit 1;
       - name: Test code
         if: always()
         uses: education/autograding@v1
